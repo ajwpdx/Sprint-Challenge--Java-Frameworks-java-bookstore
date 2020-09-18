@@ -28,9 +28,13 @@ import static org.junit.Assert.*;
 //**********
 public class BookServiceImplTest
 {
-    
+
     @Autowired
     private BookService bookService;
+
+    @Autowired SectionService sectionService;
+
+    @Autowired AuthorService authorService;
 
     @Before
     public void setUp() throws
@@ -44,11 +48,29 @@ public class BookServiceImplTest
 //            System.out.println(b.getBookid() + " " + b.getTitle());
 //        }
 
+//        List<Section> myList = sectionService.findAll();
+//        for (Section s : myList)
+//        {
+//            System.out.println(s.getSectionid() + " " + s.getName());
+//        }
+//
+//        List<Author> aList = authorService.findAll();
+//        for (Author author : aList)
+//        {
+//            System.out.println(author.getAuthorid() + " " + author.getLname());
+//        }
+
 //        26 Flatterland
 //        27 Digital Fortess
 //        28 The Da Vinci Code
 //        29 Essentials of Finance
 //        30 Calling Texas Home
+
+//        21 Fiction
+//        22 Technology
+//        23 Travel
+//        24 Business
+//        25 Religion
     }
 
     @After
@@ -87,13 +109,15 @@ public class BookServiceImplTest
     public void d_save()
     {
         String b7title = "Crushing a Java Sprint at Lambda";
-        Author a7 = new Author("Alex", "Williams");
+        Author a7 = new Author("John", "Mitchell");
         Section s2 = new Section("Technology");
 
         Book b7 = new Book("Crushing a Java Sprint at Lambda", "9780738206753", 2020, s2);
-        b7.setBookid(71);
+        s2.setSectionid(22);
+
         b7.getWrotes()
                 .add(new Wrote(a7, new Book()));
+        a7.setAuthorid(15);
         Book savedBook = bookService.save(b7);
 
         assertNotNull(savedBook);
