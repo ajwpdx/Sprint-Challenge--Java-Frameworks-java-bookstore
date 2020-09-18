@@ -58,20 +58,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Create a new Java Spring Application using IntelliJ.
-- [ ] Push commits: `git push origin <firstName-lastName>`
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Create a new Java Spring Application using IntelliJ.
+- [x] Push commits: `git push origin <firstName-lastName>`
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
-- [ ] You will be creating a REST api service to store and read data from a database. You should be able to switch between an H2 database and a PostgreSQL database by using an application.properties setting.
+- [x] You will be creating a REST api service to store and read data from a database. You should be able to switch between an H2 database and a PostgreSQL database by using an application.properties setting.
 
-- [ ] Please fork and clone this repository. This repository does have a starter project. The provided initial application has the basics in place. Note that if you start with the initial project, all the following are done for you!!!
+- [x] Please fork and clone this repository. This repository does have a starter project. The provided initial application has the basics in place. Note that if you start with the initial project, all the following are done for you!!!
 
 - Auditing fields
 - Exception Handling
@@ -90,28 +90,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 - **You are tasked to do the following**
 
-- [ ] Currently, Books are not addressed in security so those routes cannot be accessed. Setup security so that the following access is available:
-  - [ ] GET /books/books - any user with the role ADMIN or DATA can access
-  - [ ] GET /books/book/{id} - any user with role ADMIN or DATA can access
-  - [ ] POST /books/book - any user with role ADMIN can access
-  - [ ] PUT /books/book/{id} - any user with role ADMIN can access
-  - [ ] DELETE /books/book/{id} - any user with role ADMIN can access
+- [x] Currently, Books are not addressed in security so those routes cannot be accessed. Setup security so that the following access is available:
+  - [x] GET /books/books - any user with the role ADMIN or DATA can access
+  - [x] GET /books/book/{id} - any user with role ADMIN or DATA can access
+  - [x] POST /books/book - any user with role ADMIN can access
+  - [x] PUT /books/book/{id} - any user with role ADMIN can access
+  - [x] DELETE /books/book/{id} - any user with role ADMIN can access
 
-- [ ] When a client tries searching for or updating a book that does not exist, a generic exception is sent back to the client. Change this so our custom exception ResourceNotFoundException is returned instead.
+- [x] When a client tries searching for or updating a book that does not exist, a generic exception is sent back to the client. Change this so our custom exception ResourceNotFoundException is returned instead.
 
-- [ ] Add unit test for the Book Service using the database as test data. The structure is already in place, you just need to write the tests for the following:
-  - [ ] findAll
-  - [ ] findBookById that succeeds
-  - [ ] findBookById that fails
-  - [ ] delete
-  - [ ] save a new book
+- [x] Add unit test for the Book Service using the database as test data. The structure is already in place, you just need to write the tests for the following:
+  - [x] findAll
+  - [x] findBookById that succeeds
+  - [x] findBookById that fails
+  - [x] delete
+  - [x] save a new book
 
 - [ ] Add unit tests for the Book Controller NOT relying on the database as test data. The structure is already in place, you need to set up the data and write the tests for the following:
-  - [ ] listAllBooks
-  - [ ] getBookById that succeeds
-  - [ ] getBookById that fails
-  - [ ] addNewBook
-  - [ ] deleteBookById
+  - [x] listAllBooks
+  - [x] getBookById that succeeds
+  - [x] getBookById that fails
+  - [x] addNewBook
+  - [x] deleteBookById
 
 - [ ] And now that we have a good system, deploy the system to Heroku using PostgreSQL. Your application should be switchable between H2 and PostgreSQL through setting a variable in application.properties
 
@@ -123,11 +123,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 ### Required best practices
 
-- [ ] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
-- [ ] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
-- [ ] Consistent quotation usage.
-- [ ] Spell-check.
-- [ ] Schedule time to review, refine and reassess your work.
+- [x] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
+- [x] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
+- [x] Consistent quotation usage.
+- [x] Spell-check.
+- [x] Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
