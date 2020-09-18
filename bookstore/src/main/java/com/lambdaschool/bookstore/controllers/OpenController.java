@@ -123,6 +123,7 @@ public class OpenController
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map,
                                                                              headers);
+        RestTemplate restTemplate = new RestTemplate();
 
         String theToken = restTemplate.postForObject(requestURI,
                                                      request,
