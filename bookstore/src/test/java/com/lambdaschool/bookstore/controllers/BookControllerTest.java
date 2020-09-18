@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -201,23 +202,12 @@ public class BookControllerTest
     public void addNewBook() throws
             Exception
     {
-//        var apiUrl = "/books/book";
-//
-//        Book newBook = new Book();
-//        newBook.setBookid(0);
-//        newBook.setCopy();
-//        newBook.
-//        newUser.setPrimaryemail("test@test.com");
-//        Role r2 = new Role("test");
-//        newUser.getRoles().add(new UserRoles(newUser,r2));
-//        newUser.getUseremails().add(new Useremail(newUser, "test2@test.com"));
-//        var newUserAsJson = new ObjectMapper().writeValueAsString(newUser);
-//
-//        Mockito.when(bookService.save(any(Book.class))).thenReturn(newBook);
-//        var builder = MockMvcRequestBuilders.post(apiUrl).accept(MediaType.APPLICATION_JSON)
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(newUserAsJson);
-//        mockMvc.perform(builder).andExpect(status().isCreated());
+        var apiUrl = "/books/book";
+        var book = new Book("New Title", "546542348", 2020, new Section("Business"));
+        Mockito.when(bookService.save(any(Book.class))).thenReturn(book);
+        var builder = MockMvcRequestBuilders.post(apiUrl).accept(MediaType.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON).content(new ObjectMapper().writeValueAsString(book));
+        mockMvc.perform(builder).andExpect(status().isCreated());
     }
 
     @Test

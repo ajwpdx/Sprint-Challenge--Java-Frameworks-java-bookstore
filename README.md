@@ -69,9 +69,9 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 ### Task 2: Project Requirements
 
-- [ ] You will be creating a REST api service to store and read data from a database. You should be able to switch between an H2 database and a PostgreSQL database by using an application.properties setting.
+- [x] You will be creating a REST api service to store and read data from a database. You should be able to switch between an H2 database and a PostgreSQL database by using an application.properties setting.
 
-- [ ] Please fork and clone this repository. This repository does have a starter project. The provided initial application has the basics in place. Note that if you start with the initial project, all the following are done for you!!!
+- [x] Please fork and clone this repository. This repository does have a starter project. The provided initial application has the basics in place. Note that if you start with the initial project, all the following are done for you!!!
 
 - Auditing fields
 - Exception Handling
@@ -111,7 +111,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
   - [x] getBookById that succeeds
   - [x] getBookById that fails
   - [ ] addNewBook
-  - [ ] deleteBookById
+  - [x] deleteBookById
 
 - [ ] And now that we have a good system, deploy the system to Heroku using PostgreSQL. Your application should be switchable between H2 and PostgreSQL through setting a variable in application.properties
 
