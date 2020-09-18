@@ -31,6 +31,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 
@@ -190,12 +192,32 @@ public class BookControllerTest
         String tr = r.getResponse().getContentAsString();
         assert(tr.contains("Resource Not Found"));
 
+        var builder = MockMvcRequestBuilders.get(apiUrl).accept(MediaType.APPLICATION_JSON);
+        mockMvc.perform(builder).andExpect(status().isNotFound());
+
     }
 
     @Test
     public void addNewBook() throws
             Exception
     {
+//        var apiUrl = "/books/book";
+//
+//        Book newBook = new Book();
+//        newBook.setBookid(0);
+//        newBook.setCopy();
+//        newBook.
+//        newUser.setPrimaryemail("test@test.com");
+//        Role r2 = new Role("test");
+//        newUser.getRoles().add(new UserRoles(newUser,r2));
+//        newUser.getUseremails().add(new Useremail(newUser, "test2@test.com"));
+//        var newUserAsJson = new ObjectMapper().writeValueAsString(newUser);
+//
+//        Mockito.when(bookService.save(any(Book.class))).thenReturn(newBook);
+//        var builder = MockMvcRequestBuilders.post(apiUrl).accept(MediaType.APPLICATION_JSON)
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(newUserAsJson);
+//        mockMvc.perform(builder).andExpect(status().isCreated());
     }
 
     @Test
@@ -207,5 +229,9 @@ public class BookControllerTest
     public void deleteBookById() throws
             Exception
     {
+        String apiUrl = "/books/book/26";
+        var builder = MockMvcRequestBuilders.delete(apiUrl).accept(MediaType.APPLICATION_JSON);
+        mockMvc.perform(builder).andExpect(status().isOk());
+
     }
 }
